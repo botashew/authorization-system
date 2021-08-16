@@ -1,0 +1,9 @@
+extends base
+block content
+    if typeof success != 'undefined'
+        each succes in success
+            div #{succes.msg}
+    form(action="" method="POST")
+        input(type="text" placeholder="Email")
+        input(type="password", name="" placeholder="Enter Password")
+        button(type="submit") Login
