@@ -1,11 +1,10 @@
 const mongoose = require('mongoose')
-const LocalMongodbURL = 'mongodb://localhost/login-system'
+const db = 'mongodb://localhost/login-system'
 async function main(){
-    await mongoose.connect(LocalMongodbURL, {
+    await mongoose.connect(db,{
         useUnifiedTopology: true,
         useNewUrlParser: true
     })
-    console.log('Connecting is success...')
+    console.log('MongoDB connected')
 }
-
 main()
